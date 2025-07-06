@@ -24,3 +24,21 @@ export const formatRupiahForPrint = (value: string | number) => {
     maximumFractionDigits: 0,
   }).format(numValue)
 }
+
+export const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('id-ID', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+}
+
+export const formatCurrency = (value: string | number) => {
+  const numValue = typeof value === 'string' ? Number(value) : value
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(numValue)
+}

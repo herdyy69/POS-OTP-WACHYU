@@ -43,4 +43,14 @@ export const routes: Route[] = [
     isShow: true,
     submenus: [],
   },
+  {
+    id: 7,
+    link: '/purchase-orders',
+    mainPath: 'purchase-orders',
+    title: 'Pesanan Pembelian',
+    icon: <Icons.DocumentIcon />,
+    isCollapse: false,
+    isShow: true,
+    submenus: [],
+  },
 ]

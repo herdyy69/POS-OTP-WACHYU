@@ -6,6 +6,9 @@ const SearchParams = z.object({
   limit: z.number().default(10),
   order: z.string().optional(),
   sort: z.string().optional(),
+  startDate: z.string().optional(),
+  endDate: z.string().optional(),
+  status: z.string().optional(),
 })
 
 const Paginate = z.object({

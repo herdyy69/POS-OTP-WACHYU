@@ -52,7 +52,7 @@ const Dashboard = ({ children }: { children: any }) => {
             />
             <main
               className={cn(
-                'no-scrollbar bg-primary-background relative h-screen w-full space-y-4 overflow-auto p-4 pt-[104px] sm:p-6',
+                'no-scrollbar bg-primary-background relative h-screen w-full space-y-4 overflow-auto px-4 pt-[104px] pb-4 sm:px-6 sm:pb-6',
               )}
             >
               <div className='space-y-4'>
