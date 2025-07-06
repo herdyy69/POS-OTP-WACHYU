@@ -31,12 +31,12 @@ const Navbar = ({ data }: { data: Auth }) => {
           </div>
         </div>
         <div className='flex items-center gap-2 sm:gap-3'>
-          <button className='bg-greyscale-0 flex size-8 items-center justify-center rounded-full sm:size-10'>
+          {/* <button className='bg-greyscale-0 flex size-8 items-center justify-center rounded-full sm:size-10'>
             <Bell className='text-greyscale-8 h-5 w-5 sm:h-6 sm:w-6' />
           </button>
           <button className='bg-greyscale-0 flex size-8 items-center justify-center rounded-full sm:size-10'>
             <Settings className='text-greyscale-8 h-5 w-5 sm:h-6 sm:w-6' />
-          </button>
+          </button> */}
           <div className='bg-greyscale-0 flex h-8 items-center justify-center gap-2 rounded-full px-2 py-1 sm:h-10 sm:gap-2 sm:px-[5px] sm:py-[5px]'>
             <div className='ml-2 hidden items-center gap-1 sm:flex sm:gap-1.5'>
               <div className='hidden -space-y-1 sm:block'>
