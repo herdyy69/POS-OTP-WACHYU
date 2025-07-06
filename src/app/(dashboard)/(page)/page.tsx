@@ -11,6 +11,10 @@ import { TransactionHistoryTable } from './table'
 import { TransactionFilters } from './filters'
 import { TransactionSummary } from './summary'
 
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 interface ExtendedSearchParams extends SearchParams {
   storeGuid?: string
   status?: string

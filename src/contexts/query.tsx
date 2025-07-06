@@ -10,9 +10,15 @@ export const QueryProvider = ({ children }: any) => {
         defaultOptions: {
           queries: {
             staleTime: 0,
-            refetchOnWindowFocus: false,
+            gcTime: 0,
+            refetchOnWindowFocus: true,
             retryDelay: 500,
             refetchOnMount: true,
+            refetchOnReconnect: true,
+            retry: 1,
+          },
+          mutations: {
+            retry: 1,
           },
         },
         queryCache: new QueryCache({

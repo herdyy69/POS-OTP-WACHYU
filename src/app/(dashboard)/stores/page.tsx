@@ -5,6 +5,9 @@ import { TableStores } from './table'
 import { SearchParams } from '@/schemas/api'
 import { storesList } from '@/service/stores_service'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default async function Page(params: { searchParams: Promise<SearchParams> }) {
   const resolvedSearchParams = await params.searchParams
   const data = await storesList(resolvedSearchParams)
@@ -25,6 +28,7 @@ export default async function Page(params: { searchParams: Promise<SearchParams>
           <Icons.Plus className='size-3 sm:size-4' />
         </Link>
       </div>
+
       <TableStores data={data} />
     </div>
   )

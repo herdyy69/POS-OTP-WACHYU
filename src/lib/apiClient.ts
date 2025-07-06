@@ -6,6 +6,11 @@ const apiClient = axios.create({
   paramsSerializer: {
     indexes: null,
   },
+  headers: {
+    'Cache-Control': 'no-cache, no-store, must-revalidate',
+    Pragma: 'no-cache',
+    Expires: '0',
+  },
 })
 
 apiClient.interceptors.request.use(
@@ -14,6 +19,11 @@ apiClient.interceptors.request.use(
     if (accessToken) {
       config.headers['Authorization'] = `Bearer ${accessToken}`
     }
+
+    config.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    config.headers['Pragma'] = 'no-cache'
+    config.headers['Expires'] = '0'
+
     return config
   },
   (error) => Promise.reject(error),
