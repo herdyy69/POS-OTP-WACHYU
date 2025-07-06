@@ -38,6 +38,8 @@ export const FormCreate = ({ stores, products }: { stores: Store[]; products: Pr
   const [orderItems, setOrderItems] = useState<OrderItem[]>([])
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  console.log(stores, products)
+
   const orderForm = useForm<InsertSalesOrders>({
     defaultValues: {
       storeGuid: '',
