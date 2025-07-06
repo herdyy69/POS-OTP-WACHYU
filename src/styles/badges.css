@@ -1,0 +1,80 @@
+@utility badge {
+  border-color: theme(colors.greyscale.6);
+  color: theme(colors.greyscale.6);
+  font-family: var(--font-manrope);
+  display: inline-block;
+  border-radius: 9999px;
+  border-width: 1px;
+  padding: theme(spacing.1) theme(spacing.2);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+
+  @media (width >= 640px) {
+    font-size: 12px;
+    line-height: 16px;
+    padding: theme(spacing.1.5) theme(spacing.2.5);
+  }
+}
+
+/* Primary badge styles */
+@utility badge-blue {
+  background-color: theme(colors.blue.1);
+  color: theme(colors.blue.7);
+  border-color: theme(colors.blue.1);
+}
+
+@utility badge-red {
+  background-color: theme(colors.red.1);
+  color: theme(colors.red.7);
+  border-color: theme(colors.red.1);
+}
+
+@utility badge-yellow {
+  background-color: theme(colors.yellow.1);
+  color: theme(colors.yellow.7);
+  border-color: theme(colors.yellow.1);
+}
+
+@utility badge-green {
+  background-color: theme(colors.green.1);
+  color: theme(colors.green.7);
+  border-color: theme(colors.green.1);
+}
+
+@utility badge-greyscale {
+  background-color: theme(colors.greyscale.2);
+  color: theme(colors.greyscale.7);
+  border-color: theme(colors.greyscale.2);
+}
+
+/* Outline badge styles */
+@utility badge-outline-blue {
+  border-color: theme(colors.blue.base);
+  color: theme(colors.blue.base);
+  background-color: transparent;
+}
+
+@utility badge-outline-red {
+  border-color: theme(colors.red.base);
+  color: theme(colors.red.base);
+  background-color: transparent;
+}
+
+@utility badge-outline-yellow {
+  border-color: theme(colors.yellow.base);
+  color: theme(colors.yellow.base);
+  background-color: transparent;
+}
+
+@utility badge-outline-green {
+  border-color: theme(colors.green.base);
+  color: theme(colors.green.base);
+  background-color: transparent;
+}
+
+@utility badge-outline-greyscale {
+  border-color: theme(colors.greyscale.6);
+  color: theme(colors.greyscale.6);
+  background-color: transparent;
+}

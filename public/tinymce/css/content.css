@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+  --text-body-color: #395568;
+  --inter-font: 'Inter', sans-serif;
+}
+body {
+  font-family: var(--inter-font);
+  font-weight: 400;
+  color: var(--text-body-color);
+}
+h1 {
+  font-size: 26px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 22px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 16px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 16px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-body-color);
+  font-family: var(--inter-font);
+}
+
+a {
+  color: #2d5d9f;
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+li {
+  font-size: 16px;
+  font-family: var(--inter-font);
+}
+
+blockquote {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
+  letter-spacing: 0%;
+
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #2d5d9f;
+  padding-left: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
