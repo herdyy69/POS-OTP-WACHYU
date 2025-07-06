@@ -25,10 +25,7 @@ const Sidebar = () => {
       <div
         className={cn(
           'no-scrollbar bg-greyscale-0 fixed top-0 bottom-0 left-0 z-30 max-h-screen flex-none shadow-md transition-all duration-200 ease-in-out lg:relative',
-          [
-            isSidebarCollapse ? 'lg:w-[80px]' : 'lg:w-[270px]',
-            isMobileMenuOpen ? 'w-[280px] sm:w-[320px]' : 'w-0 lg:w-auto',
-          ],
+          [isSidebarCollapse ? 'lg:w-[80px]' : 'lg:w-[250px]', isMobileMenuOpen ? 'w-[280px] sm:w-[320px]' : 'w-0'],
         )}
       >
         <div
