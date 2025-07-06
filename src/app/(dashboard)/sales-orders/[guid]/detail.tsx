@@ -3,7 +3,6 @@
 import { toast } from '@/components/ui/alert/toast'
 import { DeleteConfirmation } from '@/components/ui/dialog/deleteConfirmation'
 import { Icons } from '@/components/ui/icons'
-import Cell from '@/components/ui/table/cells'
 import DataTable from '@/components/ui/table/dataTable'
 import Form from '@/components/ui/form'
 import { InsertOrderItems } from '@/schemas/order-items'
@@ -13,6 +12,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { printThermalInvoice } from '@/lib/thermal-printer'
 
 interface Product {
   guid: string
@@ -149,6 +149,21 @@ export const OrderDetail = ({ data, products }: { data: OrderData; products: Pro
       form.setValue('productGuid', product.guid)
       form.setValue('soldPricePerUnit', suggestedPrice.toString())
     }
+  }
+
+  const handlePrintInvoice = () => {
+    const invoiceData = {
+      order: {
+        guid: data.order.guid,
+        storeName: data.order.storeName,
+        orderDate: data.order.orderDate,
+        status: data.order.status,
+        notes: data.order.notes,
+      },
+      items: data.items,
+    }
+
+    printThermalInvoice(invoiceData)
   }
 
   const columns = [
@@ -289,6 +304,13 @@ export const OrderDetail = ({ data, products }: { data: OrderData; products: Pro
 
         {/* Items Table */}
         <DataTable dataQuery={{ data: data.items }} columns={columns} isServerSide={false} emptyText='item pesanan' />
+      </div>
+
+      <div className='flex w-full justify-end'>
+        <button onClick={handlePrintInvoice} className='btn-outline-green w-full'>
+          <Icons.DocumentIcon className='size-4' />
+          Print Faktur
+        </button>
       </div>
     </div>
   )

@@ -16,3 +16,11 @@ export const formatNumber = (value?: string) => {
   }
   return Number(numberString)
 }
+
+export const formatRupiahForPrint = (value: string | number) => {
+  const numValue = typeof value === 'string' ? Number(value) : value
+  return new Intl.NumberFormat('id-ID', {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(numValue)
+}
