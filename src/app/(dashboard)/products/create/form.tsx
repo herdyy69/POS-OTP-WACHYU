@@ -16,7 +16,7 @@ export const FormCreate = () => {
       description: '',
       imageUrl: '',
       originalPrice: '',
-      profitMarginPercentage: '',
+      profitMarginPercentage: '10',
     },
 
     resolver: zodResolver(InsertProducts),
@@ -90,7 +90,7 @@ export const FormCreate = () => {
                   <h3 className='plabs-title-medium-16 text-greyscale-6'>Margin Keuntungan (%)</h3>
                   <p className='plabs-body-regular-14 text-greyscale-5'>Masukkan persentase margin keuntungan.</p>
                 </div>
-                <Form.Input name={`profitMarginPercentage`} type='number' placeholder='20' step='0.01' />
+                <Form.Input name={`profitMarginPercentage`} type='number' placeholder='10' step='0.01' />
               </div>
             </div>
           </div>
